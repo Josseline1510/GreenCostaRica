@@ -1,0 +1,71 @@
+*{
+    padding: 0px; /*Espacio que hay entre una etiqueta y el contenido de su orden*/
+    margin: 0px; /*Espacio que hay entre una etiqueta y otra (etiquetas adyacentes), sea arriba, abajo o a los lados*/
+    box-sizing: border-box; 
+}
+
+body {
+    background:#fff url(img/background.png) repeat-x;
+    background-size: contain; /* Hace que la imagen de fondo cubra todo el cuerpo */
+}
+
+p{
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+img.floatleft{
+    float: left;
+    margin: 0px 14px 3px 0px;
+}
+
+#outer{
+    position: relative;
+    width: 920px;
+    background-color: #ffff;
+    border: initial; /*Apenas se va a medio ver el borde*/
+    overflow: overlay; /*Desbordamiento. Overlay: sobreponer*/
+    margin: 0px auto;
+}
+
+header{
+    background-image: url(img/banner.jpg);
+    background-size: cover;
+    margin: 1px 1px;
+    width: 880px;
+    height: 250px;
+    position: relative;
+}
+
+#header h1{
+    font-size: 10em; /* Tamaño de fuente del encabezado h2 */
+    padding-bottom: 2em; /* Espaciado inferior del encabezado h2 */
+    color: green; /* Color del texto del encabezado h2 */
+}
+
+#principalcontent{
+    width: 100%; /*100% del tamaño de su contenedor*/
+    background-color: white;
+}
+
+#secondarycontent{
+    width: 25%;
+    float: right;
+}
+
+#primarycontent{
+    width: 72%;
+    float: left;
+    margin-right: 3px;
+}
+
+footer{
+    border-top: double;
+    clear: both;
+    height: 66px;
+    text-align: center;
+    color: #fff;
+    background-color: darkgray;
+    padding-top: 10px;
+    font-size: large;
+}
