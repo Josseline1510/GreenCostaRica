@@ -1,71 +1,143 @@
 *{
     padding: 0px; /*Espacio que hay entre una etiqueta y el contenido de su orden*/
     margin: 0px; /*Espacio que hay entre una etiqueta y otra (etiquetas adyacentes), sea arriba, abajo o a los lados*/
-    box-sizing: border-box; 
+    box-sizing: border-box; /*hace que el ancho y alto de los elementos incluyan el padding y el borde, en lugar de agregarlos al tamaño total. Esto evita que los elementos se desborden o se comporten de manera inesperada. */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Fuente de la página*/
 }
 
 body {
-    background:#fff url(img/background.png) repeat-x;
+    background:#fff url(img/background.png) repeat-x; /* Establece un fondo blanco con una imagen repetida horizontalmente */
     background-size: contain; /* Hace que la imagen de fondo cubra todo el cuerpo */
 }
 
 p{
-    margin-bottom: 14px;
-    text-align: justify;
+    margin-bottom: 14px; /* Espaciado inferior entre los párrafos */
+    text-align: justify; /* Justificar el texto en los párrafos */
 }
 
 img.floatleft{
-    float: left;
-    margin: 0px 14px 3px 0px;
+    float: left; /* Hace que las imágenes floten a la izquierda */
+    margin: 0px 14px 3px 0px; /* Márgenes de las imágenes flotantes */
 }
 
 #outer{
     position: relative;
     width: 920px;
     background-color: #ffff;
-    border: initial; /*Apenas se va a medio ver el borde*/
-    overflow: overlay; /*Desbordamiento. Overlay: sobreponer*/
-    margin: 0px auto;
+    border: initial; /* Borde inicial apenas visible */
+    overflow: overlay; /* Control del desbordamiento */
+    margin: 0px auto; /* Margen automático para centrar el contenedor */
 }
 
+/* Estilos para el encabezado */
 header{
-    background-image: url(img/banner.jpg);
-    background-size: cover;
-    margin: 1px 1px;
+    background-image: url(img/banner.jpg); /* Imagen de fondo del encabezado */
+    margin: 5px 20px 0px 20px; /* Márgenes del encabezado */
     width: 880px;
     height: 250px;
     position: relative;
+    
 }
 
+/* Estilos para el título en el encabezado */
 #header h1{
-    font-size: 10em; /* Tamaño de fuente del encabezado h2 */
-    padding-bottom: 2em; /* Espaciado inferior del encabezado h2 */
-    color: green; /* Color del texto del encabezado h2 */
+    font-size: 4em; /* Tamaño de fuente del encabezado h1 */
+    color: #488000; /* Color del texto del encabezado h1 */
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
+/* Estilos para la barra de navegación */
+nav{
+    width: 880px;
+    height: 35px;
+    background-color: #488000;
+    margin: 0px 20px 1px 20px;
+}
+
+/* Estilos para los enlaces en la barra de navegación */
+nav a{
+    text-decoration: none; /* Elimina la línea subrayada */
+    color: white;
+    padding: 15px; /* Espaciado interno de los enlaces en la barra de navegación */
+    border-right: 1.5px solid #fff; /* Borde derecho entre los enlaces */
+    line-height: 35px; /* Centra verticalmente el contenido en relación con la altura del menú */
+    
+}
+
+/* Estilos para el último enlace en la barra de navegación */
+nav a:last-child {
+    border-right: none; /* Elimina el borde derecho para el último enlace */
+}
+
+/* Estilos para el contenido principal */
 #principalcontent{
-    width: 100%; /*100% del tamaño de su contenedor*/
-    background-color: white;
+    width: 100%; /* Ancho del contenido principal al 100% del contenedor */
+    background-color: white; /* Fondo blanco del contenido principal */
+    
 }
 
+/* Estilos para el contenido secundario */
 #secondarycontent{
-    width: 25%;
-    float: right;
+    width: 200px;
+    float: left; /* Hace que el contenido secundario flote a la izquierda */
+    margin: 0px 5px 10px 20px; /* Márgenes del contenido secundario */
 }
 
+/* Estilos para el contenido principal */
 #primarycontent{
-    width: 72%;
-    float: left;
-    margin-right: 3px;
+    width: 600px;
+    float: right; /* Hace que el contenido principal flote a la derecha */
+    margin: 0px 20px 10px 0px; /* Márgenes del contenido principal */
 }
 
+/* Estilos para títulos dentro del contenido */
+.titulo h1{
+    color: #4B4B4B;
+    margin: 15px 0px; /* Márgenes para los títulos h1 */
+    font-size: 25px; /* Tamaño de fuente para los títulos h1 */
+}
+
+.titulo h2{
+    color: #488000;
+    margin: 15px 0px; /* Márgenes para los títulos h2 */
+    font-size: 20px; /* Tamaño de fuente para los títulos h2 */
+}
+
+/* Estilos para imágenes dentro del contenido secundario */
+#secondarycontent .contenido img{
+    float: left; /* Hace que las imágenes floten a la izquierda */
+    margin-right: 10px; /* Margen derecho de las imágenes */
+}
+
+/* Estilos para imágenes dentro del contenido principal */
+#primarycontent .contenido img{
+    float: left; /* Hace que las imágenes floten a la izquierda */
+    width: 210px; /* Ancho de las imágenes */
+    margin-right: 10px; /* Margen derecho de las imágenes */
+}
+
+/* Estilos para el pie de página */
 footer{
-    border-top: double;
-    clear: both;
-    height: 66px;
-    text-align: center;
+    clear: both; /* Borra ambos flotantes */
+    height: 35px;
+    width: 880px;
+    margin: 0px 20px 1px 20px;
+    text-align: center; /* Centra el texto en el pie de página */
     color: #fff;
-    background-color: darkgray;
-    padding-top: 10px;
-    font-size: large;
+    background-color: #488000; /* Fondo del pie de página */
+}
+
+/* Estilos para los enlaces en el pie de página */
+footer a{
+    color: white;
+    padding: 10px 15px; /* Espaciado interno de los enlaces en el pie de página */
+    border-right: 1.5px solid #fff; /* Borde derecho entre los enlaces en el pie de página */
+    padding-bottom: 0px; /* Espaciado inferior de los enlaces en el pie de página */
+    padding-top: 0px; /* Espaciado superior de los enlaces en el pie de página */
+    line-height: 35px; /* Centra verticalmente el contenido en relación con la altura */
+}
+
+footer a:last-child {
+    border-right: none; /* Elimina el borde derecho para el último enlace */
 }
